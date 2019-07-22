@@ -32,7 +32,8 @@ class LibraryContainer extends Component {
     }
 
     handleLogin = (username,password) => {
-        return fetch('http://localhost:5000/api/auth/login', {
+        // return fetch('http://localhost:5000/api/auth/login', {
+        return fetch('http://mitraiscdccharles.ap-southeast-1.elasticbeanstalk.com/api/auth/login', {
             method: 'POST',
             body: JSON.stringify({
                 email: username,
@@ -80,7 +81,8 @@ class LibraryContainer extends Component {
 
     handleSignup = (email,password,fullname) =>{
 
-        fetch('http://localhost:5000/api/auth/register', {
+        // fetch('http://localhost:5000/api/auth/register', {
+        fetch('http://mitraiscdccharles.ap-southeast-1.elasticbeanstalk.com/api/auth/register', {
             method: 'POST',
             body: JSON.stringify({
                 email: email,
